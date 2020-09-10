@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: kuard
+    revision: '1'
   name: kuard
 spec:
   replicas: 3
