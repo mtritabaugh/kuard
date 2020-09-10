@@ -1,0 +1,12 @@
+apiVersion: projectcontour.io/v1
+kind: HTTPProxy
+metadata: 
+  labels:
+    app: kuard
+  name: kuard
+  namespace: kuard
+spec: 
+  routes: 
+    - services:
+      - name: kuard
+        port: 80
