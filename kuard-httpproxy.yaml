@@ -6,6 +6,8 @@ metadata:
   name: kuard
   namespace: kuard
 spec: 
+  virtualhost:
+    fqdn: kuard.capv-dev-cluster1.simpson.net
   routes: 
     - services:
       - name: kuard
