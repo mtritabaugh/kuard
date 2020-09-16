@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   labels:
     app: kuard
-    revision: '1'
   name: kuard
 spec:
   replicas: 2
@@ -21,3 +20,11 @@ spec:
         env:
           - name: test
             value: test
+        volumeMounts:
+          - mountPath: /usr/local/test
+          		name: test-volume
+      volumes:
+        - name: test-volume
+          persistentVolumeClaim:
+            	claimName: test-claim
+
