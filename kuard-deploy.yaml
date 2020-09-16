@@ -36,6 +36,8 @@ spec:
         volumeMounts:
         - mountPath: /opt/atlassian/jira/conf
           name: jira-conf
+        - mountPath: /usr/local/test
+          name: test-volume
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
@@ -46,3 +48,6 @@ spec:
           defaultMode: 420
           name: jira-conf
         name: jira-conf
+      - name: test-volume
+        persistentVolumeClaim:
+          claimName: test-claim
