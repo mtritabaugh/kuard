@@ -8,27 +8,5 @@ data:
     key2=value2
 kind: ConfigMap
 metadata:
-  annotations:
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"v1","data":{"dp.props":"Basically, the contents\nof any file.","jira.conf":"key1=value1\nkey2=value2"},"kind":"ConfigMap","metadata":{"annotations":{},"name":"jira-conf","namespace":"kuard"}}
-  creationTimestamp: "2020-09-09T20:25:43Z"
-  managedFields:
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:data:
-        .: {}
-        f:dp.props: {}
-        f:jira.conf: {}
-      f:metadata:
-        f:annotations:
-          .: {}
-          f:kubectl.kubernetes.io/last-applied-configuration: {}
-    manager: kubectl
-    operation: Update
-    time: "2020-09-09T20:25:43Z"
   name: jira-conf
   namespace: kuard
-  resourceVersion: "27926132"
-  selfLink: /api/v1/namespaces/kuard/configmaps/jira-conf
-  uid: b876397b-9869-4b86-b3ed-56d2f28819c8
