@@ -43,7 +43,7 @@ spec:
       terminationGracePeriodSeconds: 30
       volumes:
       - configMap:
-          defaultMode: 0777
+          defaultMode: 777
           name: jira-conf
         name: jira-conf
       - name: test-volume
